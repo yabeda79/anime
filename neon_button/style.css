@@ -5,7 +5,9 @@
 }
 
 :root {
-    --neon_btn_color: #00BFFF;
+    --neon_btn_color: #7FFF00;
+    --tran: 0.2s;
+    --tran_delay: 0.25s;
 }
 /* colors #2196f3 #7FFF00 #FF1493 #00BFFF*/
 
@@ -28,14 +30,15 @@
     text-decoration: none;
     font-size: 24px;
     overflow: hidden;
-    transition: 0.2s;
+    transition: calc(var(--tran)*1);
 }
 
 .neon a:hover {
     color: #255784;
     background-color: var(--neon_btn_color);
     box-shadow: 0 0 10px var(--neon_btn_color), 0 0 40px var(--neon_btn_color), 0 0 80px var(--neon_btn_color);
-    transition-delay: 1s;
+    /* transition-delay: 1s; */
+    transition-delay: calc(var(--tran_delay)*2);
 }
 
 .neon a span {
@@ -53,7 +56,8 @@
 
 .neon a:hover span:nth-child(1) {
     left: 100%;
-    transition: 1s;
+    /* transition: 1s; */
+    transition: calc(var(--tran)*2.5);
 }
 
 .neon a span:nth-child(2) {
@@ -66,8 +70,10 @@
 
 .neon a:hover span:nth-child(2) {
     top: 100%;
-    transition: 1s;
-    transition-delay: 0.25s;
+    /* transition: 1s;
+    transition-delay: 0.25s; */
+    transition: calc(var(--tran)*2.5);
+    transition-delay: calc(var(--tran_delay)/2);
 }
 
 .neon a span:nth-child(3) {
@@ -80,8 +86,10 @@
 
 .neon a:hover span:nth-child(3) {
     right: 100%;
-    transition: 1s;
-    transition-delay: 0.5s;
+    /* transition: 1s;
+    transition-delay: 0.5s; */
+    transition: calc(var(--tran)*2.5);
+    transition-delay: calc(var(--tran_delay)*1);
 }
 
 .neon a span:nth-child(4) {
@@ -94,7 +102,9 @@
 
 .neon a:hover span:nth-child(4) {
     bottom: 100%;
-    transition: 1s;
-    transition-delay: 0.75s;
+    /* transition: 1s;
+    transition-delay: 0.75s; */
+    transition: calc(var(--tran)*2.5);
+    transition-delay: calc(var(--tran_delay)*1.5);
 }
 
